@@ -4,6 +4,7 @@ import application.Banco.De.Sangue.dao.CandidatosRepository;
 import application.Banco.De.Sangue.dto.CandidatosDTO;
 import application.Banco.De.Sangue.exception.CandidatoNotFoundException;
 import application.Banco.De.Sangue.model.Candidatos;
+import application.Banco.De.Sangue.util.CopyProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
