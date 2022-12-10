@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>application</groupId>
-	<artifactId>Blood-Center</artifactId>
+	<artifactId>Banco-De-Sangue</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Blood-Center</name>
-	<description>Blood Center</description>
+	<name>Banco de Sangue</name>
+	<description>Banco de Sangue</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
