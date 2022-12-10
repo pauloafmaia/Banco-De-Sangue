@@ -1,13 +1,13 @@
-package application.Blood.Center;
+package application.Banco.De.Sangue;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BloodCenterApplication {
+public class BancoDeSangueApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BloodCenterApplication.class, args);
+		SpringApplication.run(BancoDeSangueApp.class, args);
 	}
 
 }
