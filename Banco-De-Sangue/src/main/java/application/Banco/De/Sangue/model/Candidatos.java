@@ -16,7 +16,7 @@ public class Candidatos {
     public String rg;
 
     @Column(name = "data_nasc")
-    public String dataNascimento;
+    public String data_nasc;
 
     public String sexo;
     public String mae;
@@ -30,12 +30,12 @@ public class Candidatos {
     public String estado;
 
     @Column(name = "telefone_fixo")
-    public String telefoneFixo;
+    public String telefone_fixo;
 
     public String celular;
     public String altura;
     public String peso;
 
     @Column(name = "tipo_sanguineo")
-    public String tipoSanguineo;
+    public String tipo_sanguineo;
 }

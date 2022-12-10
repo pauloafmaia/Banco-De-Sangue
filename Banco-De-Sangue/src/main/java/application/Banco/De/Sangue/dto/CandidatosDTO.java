@@ -9,7 +9,7 @@ public class CandidatosDTO {
     public String nome;
     public String cpf;
     public String rg;
-    public String dataNascimento;
+    public String data_nasc;
     public String sexo;
     public String mae;
     public String pai;
@@ -20,9 +20,9 @@ public class CandidatosDTO {
     public String bairro;
     public String cidade;
     public String estado;
-    public String telefoneFixo;
+    public String telefone_fixo;
     public String celular;
     public String altura;
     public String peso;
-    public String tipoSanguineo;
+    public String tipo_sanguineo;
 }

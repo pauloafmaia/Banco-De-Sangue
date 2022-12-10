@@ -28,8 +28,9 @@ public class CandidatosController {
     }
 
     @PostMapping("/candidatos")
-    public Candidatos create (@RequestBody Candidatos candidatos){
-        return candidatosRepository.save(candidatos);
+    public boolean create (@RequestBody List<Candidatos> candidatos){
+        candidatos.forEach(candidato -> candidatosRepository.save(candidato));
+        return true;
     }
 
     @PutMapping("/candidatos/{id}")
@@ -39,7 +40,7 @@ public class CandidatosController {
                     record.setNome(candidatos.getNome());
                     record.setCpf(candidatos.getCpf());
                     record.setRg(candidatos.getRg());
-                    record.setDataNascimento(candidatos.getDataNascimento());
+                    record.setData_nasc(candidatos.getData_nasc());
                     record.setSexo(candidatos.getSexo());
                     record.setMae(candidatos.getMae());
                     record.setPai(candidatos.getPai());
@@ -50,11 +51,11 @@ public class CandidatosController {
                     record.setBairro(candidatos.getBairro());
                     record.setCidade(candidatos.getCidade());
                     record.setEstado(candidatos.getEstado());
-                    record.setTelefoneFixo(candidatos.getTelefoneFixo());
+                    record.setTelefone_fixo(candidatos.getTelefone_fixo());
                     record.setCelular(candidatos.getCelular());
                     record.setAltura(candidatos.getAltura());
                     record.setPeso(candidatos.getPeso());
-                    record.setTipoSanguineo(candidatos.getTipoSanguineo());
+                    record.setTipo_sanguineo(candidatos.getTipo_sanguineo());
                     Candidatos updated = candidatosRepository.save(record);
                     return ResponseEntity.ok().body(updated);
                 }).orElse(ResponseEntity.notFound().build());
