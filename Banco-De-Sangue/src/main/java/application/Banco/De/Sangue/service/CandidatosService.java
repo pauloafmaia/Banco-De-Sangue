@@ -1,8 +1,7 @@
 package application.Banco.De.Sangue.service;
 
 import application.Banco.De.Sangue.dao.CandidatosRepository;
-import application.Banco.De.Sangue.dto.CandidatosDTO;
-import application.Banco.De.Sangue.dto.ResultadosDTO;
+import application.Banco.De.Sangue.dto.*;
 import application.Banco.De.Sangue.exception.CandidatoNotFoundException;
 import application.Banco.De.Sangue.model.Candidatos;
 import application.Banco.De.Sangue.util.CopyProperties;
@@ -36,5 +35,21 @@ public class CandidatosService {
 
     public List<ResultadosDTO> getQuantidadeDeCandidatosPorEstado() {
         return candidatosRepository.getQuantidadeDeCandidatosPorEstado();
+    }
+
+    public List<AvgImcByAgeDTO> getAvgImcByAge() {
+        return candidatosRepository.getAvgImcByAge();
+    }
+
+    public List<ObesosPorSexoDTO> getObesosPorSexo() {
+        return candidatosRepository.getObesosPorSexo();
+    }
+
+    public List<MediaIdadeTipoSanguineoDTO> getMediaIdadeTipoSanguineo() {
+        return candidatosRepository.getMediaIdadeTipoSanguineo();
+    }
+
+    public List<QuantidadeDoadoresTipoSanguineoDTO> getQuantidadeDoadoresTipoSanguineo() {
+        return candidatosRepository.getQuantidadeDoadoresTipoSanguineo();
     }
 }

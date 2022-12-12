@@ -1,7 +1,7 @@
 package application.Banco.De.Sangue.controller;
 
 import application.Banco.De.Sangue.dao.CandidatosRepository;
-import application.Banco.De.Sangue.dto.ResultadosDTO;
+import application.Banco.De.Sangue.dto.*;
 import application.Banco.De.Sangue.model.Candidatos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -37,5 +37,25 @@ public class CandidatosController {
     @GetMapping("/estado")
     public List<ResultadosDTO> getQuantidadeDeCandidatosPorEstado() {
         return candidatosRepository.getQuantidadeDeCandidatosPorEstado();
+    }
+
+    @GetMapping("/imcbyage")
+    public List<AvgImcByAgeDTO> getAvgImcByAge() {
+        return candidatosRepository.getAvgImcByAge();
+    }
+
+    @GetMapping("/obesosporsexo")
+    public List<ObesosPorSexoDTO> getObesosPorSexo() {
+        return candidatosRepository.getObesosPorSexo();
+    }
+
+    @GetMapping("/mediaidadetiposanguineo")
+    public List<MediaIdadeTipoSanguineoDTO> getMediaIdadeTipoSanguineo() {
+        return candidatosRepository.getMediaIdadeTipoSanguineo();
+    }
+
+    @GetMapping("/quantidadedoadorestiposanguineo")
+    public List<QuantidadeDoadoresTipoSanguineoDTO> getQuantidadeDoadoresTipoSanguineo() {
+        return candidatosRepository.getQuantidadeDoadoresTipoSanguineo();
     }
 }
