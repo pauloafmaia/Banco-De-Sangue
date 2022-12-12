@@ -3,6 +3,10 @@ package application.Banco.De.Sangue.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+@NamedNativeQuery(name = "Candidatos.getQuantidadeDeCandidatosPorEstado",
+        query = "SELECT count(*), candidatos.estado FROM Candidatos candidatos GROUP BY candidatos.estado",
+        resultSetMapping = "Mapping.ResultadosDTO")
+
 @Data
 @Entity
 public class Candidatos {
@@ -38,4 +42,5 @@ public class Candidatos {
 
     @Column(name = "tipo_sanguineo")
     public String tipo_sanguineo;
+
 }
