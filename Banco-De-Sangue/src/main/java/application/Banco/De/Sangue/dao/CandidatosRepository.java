@@ -10,6 +10,6 @@ import java.util.List;
 public interface CandidatosRepository extends JpaRepository<Candidatos, Long> {
 
     @Query(nativeQuery = true)
-    ResultadosDTO getQuantidadeDeCandidatosPorEstado();
+    List<ResultadosDTO> getQuantidadeDeCandidatosPorEstado();
 
 }

@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class ResultadosDTO {
 
-    private int quantidadePorEstado;
+    private Long quantidadePorEstado;
     private String estado;
 }

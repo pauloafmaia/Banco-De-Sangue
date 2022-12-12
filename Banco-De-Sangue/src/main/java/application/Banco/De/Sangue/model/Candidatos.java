@@ -1,11 +1,24 @@
 package application.Banco.De.Sangue.model;
 
+import application.Banco.De.Sangue.dto.ResultadosDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@NamedNativeQuery(name = "Candidatos.getQuantidadeDeCandidatosPorEstado",
-        query = "SELECT count(*), candidatos.estado FROM Candidatos candidatos GROUP BY candidatos.estado",
-        resultSetMapping = "Mapping.ResultadosDTO")
+@NamedNativeQuery(
+        name = "Candidatos.getQuantidadeDeCandidatosPorEstado",
+        query = "SELECT count(*) as quantidadePorEstado, candidatos.estado FROM candidatos candidatos GROUP BY candidatos.estado",
+        resultSetMapping = "getQuantidadeDeCandidatosPorEstado"
+)
+
+@SqlResultSetMapping(
+        name = "getQuantidadeDeCandidatosPorEstado",
+        classes = @ConstructorResult(targetClass = ResultadosDTO.class,
+                columns = {
+                        @ColumnResult(name = "quantidadePorEstado"),
+                        @ColumnResult(name = "estado")
+                }
+        )
+)
 
 @Data
 @Entity
